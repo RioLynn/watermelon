@@ -13,21 +13,18 @@ public class Message {
     private LocalDateTime created;
     @ApiModelProperty(value = "last_modified", example = "2019-02-18T20:53:58")
     private LocalDateTime last_modified;
-    @ApiModelProperty(value = "status", example = "IN PROGRESS")
-    private String status;
     @ApiModelProperty(value = "created_by_user", example = "Hannibal")
     private String created_by_user;
 
     public Message() {
     }
 
-    public Message(long id, String message, LocalDateTime created, LocalDateTime last_modified, String status,
+    public Message(long id, String message, LocalDateTime created, LocalDateTime last_modified,
             String created_by_user) {
         this.id = id;
         this.message = message;
         this.created = created;
         this.last_modified = last_modified;
-        this.status = status;
         this.created_by_user = created_by_user;
     }
 
@@ -61,14 +58,6 @@ public class Message {
 
     public void setLast_modified(LocalDateTime last_modified) {
         this.last_modified = last_modified;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public String getCreated_by_user() {

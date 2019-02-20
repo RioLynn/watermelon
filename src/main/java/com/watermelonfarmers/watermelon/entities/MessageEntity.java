@@ -15,27 +15,24 @@ public class MessageEntity {
     @GeneratedValue
     @Column(name = "ID", unique = true)
     private long id;
-    @Column(name = "Message")
+    @Column(name = "Message_body")
     private String message;
     @Column(name = "Created")
     private LocalDateTime created;
     @Column(name = "Last_modified")
     private LocalDateTime last_modified;
-    @Column(name = "Status")
-    private String status;
     @Column(name = "Created_by_user")
     private String created_by_user;
 
     public MessageEntity() {
     }
 
-    public MessageEntity(long id, String message, LocalDateTime created, LocalDateTime last_modified, String status,
+    public MessageEntity(long id, String message, LocalDateTime created, LocalDateTime last_modified,
             String created_by_user) {
         this.id = id;
         this.message = message;
         this.created = created;
         this.last_modified = last_modified;
-        this.status = status;
         this.created_by_user = created_by_user;
     }
 
@@ -69,14 +66,6 @@ public class MessageEntity {
 
     public void setLast_modified(LocalDateTime last_modified) {
         this.last_modified = last_modified;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 
     public String getCreated_by_user() {

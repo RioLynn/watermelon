@@ -11,7 +11,6 @@ public class MessageMapper {
         messageEntity.setCreated_by_user(request.getCreated_by_user());
         messageEntity.setCreated(request.getCreated());
         messageEntity.setLast_modified(request.getLast_modified());
-        messageEntity.setStatus(request.getStatus());
         return messageEntity;
     }
 
@@ -22,7 +21,6 @@ public class MessageMapper {
         message.setCreated_by_user(messageEntity.getCreated_by_user());
         message.setCreated(messageEntity.getCreated());
         message.setLast_modified(messageEntity.getLast_modified());
-        message.setStatus(messageEntity.getStatus());
         return message;
     }
 }

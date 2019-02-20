@@ -32,4 +32,14 @@ public class MessageController {
     public ResponseEntity createMessage(@RequestBody Message request) {
         return messageProcessor.createMessage(request);
     }
+    
+    @RequestMapping(method = RequestMethod.PATCH)
+    public ResponseEntity updateMessage(@RequestBody Message request) {
+        return messageProcessor.createMessage(request);
+    }
+    
+    @RequestMapping(method = RequestMethod.DELETE)
+    public ResponseEntity deleteMessage(@RequestBody Message request) {
+        return messageProcessor.deleteMessage(request);
+    }
 }

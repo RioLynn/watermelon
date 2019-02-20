@@ -44,4 +44,11 @@ public class MessageProcessor {
         }
         return response;
     }
+
+    public ResponseEntity<String> deleteMessage(Message request) {
+        ResponseEntity<String> response = new ResponseEntity<String>("success", HttpStatus.OK);
+        MessageEntity messageEntity = MessageMapper.mapMessageEntityToMessage(request);
+        messageRepository.delete(messageEntity);
+        return response;
+    }
 }
